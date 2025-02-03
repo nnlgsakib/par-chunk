@@ -7,7 +7,41 @@ import 'package:http/http.dart' as http;
 void main() {
   runApp(const DownloaderApp());
 }
+class SplashScreen extends StatefulWidget {
+  const SplashScreen({Key? key}) : super(key: key);
 
+  @override
+  _SplashScreenState createState() => _SplashScreenState();
+}
+
+class _SplashScreenState extends State<SplashScreen> {
+  @override
+  void initState() {
+    super.initState();
+    Timer(const Duration(seconds: 3), () {
+      Navigator.of(context).pushReplacement(
+        MaterialPageRoute(builder: (context) => const DownloaderHome()),
+      );
+    });
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: Colors.blue,
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Image.asset('assets/icon.png', width: 150), // Add your logo
+            const SizedBox(height: 20),
+            const CircularProgressIndicator(),
+          ],
+        ),
+      ),
+    );
+  }
+}
 class DownloaderApp extends StatelessWidget {
   const DownloaderApp({Key? key}) : super(key: key);
 
@@ -20,7 +54,8 @@ class DownloaderApp extends StatelessWidget {
         scaffoldBackgroundColor: const Color(0xFF1A1A1A),
         cardColor: const Color(0xFF2A2A2A),
       ),
-      home: const DownloaderHome(),
+      home: SplashScreen()
+      //const DownloaderHome(),
     );
   }
 }
