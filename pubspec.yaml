@@ -102,4 +102,3 @@ flutter_launcher_icons:
     generate: true
     icon_path: "assets/appic.png"  # Use the correct path
   image_path: "assets/appic.png"
-
