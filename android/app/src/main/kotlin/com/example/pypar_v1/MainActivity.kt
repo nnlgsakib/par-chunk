@@ -1,4 +1,4 @@
-package com.example.pypar_v1
+package com.example.parchunk
 
 import io.flutter.embedding.android.FlutterActivity
 

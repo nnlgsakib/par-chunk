@@ -1,6 +1,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
     <application
-        android:label="pypar_v1"
+        android:label="parchunk"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity
